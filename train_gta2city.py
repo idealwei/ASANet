@@ -21,7 +21,6 @@ import torch.optim as optim
 import torch.backends.cudnn as cudnn
 import torch.nn.functional as F
 
-from networks.deeplab_vgg import DeeplabVGG
 from networks.deeplab import Deeplab_Res101
 from networks.discriminator import EightwayASADiscriminator
 from utils.loss import CrossEntropy2d
