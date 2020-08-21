@@ -2,8 +2,8 @@
 set -ex
 ls
 export PYTHONPATH=`pwd`
-DLS_DATA_URL='/share/data/'
-DLS_TRAIN_TRAIN='./snapshots/'
+DLS_DATA_URL='/home/weizhou/data/'
+DLS_TRAIN_TRAIN='../snapshots/'
 echo ${DLS_DATA_URL}
 CUDA_VISIBLE_DEVICES=2 python train_gta2city.py \
             --method='GTA5KLASA' \
