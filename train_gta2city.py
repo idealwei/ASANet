@@ -18,7 +18,6 @@ from torch.utils import data, model_zoo
 import numpy as np
 from torch.autograd import Variable
 import torch.optim as optim
-import torchcontrib
 import torch.backends.cudnn as cudnn
 import torch.nn.functional as F
 
