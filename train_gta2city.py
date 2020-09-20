@@ -1,12 +1,5 @@
 import sys
 import os
-try:
-    import moxing as mox
-    mox.file.shift("os", "mox")
-    print("Training on HuaWei YunDao...")
-
-except ImportError:
-    print("Trainning on local maching")
 import os.path as osp
 import random
 from pprint import pprint
@@ -72,11 +65,6 @@ def main():
     # Create network
     if args.backbone == 'resnet':
         model = Deeplab_Res101(num_classes=args.num_classes)
-    elif args.backbone == 'vgg':
-        model = DeeplabVGG(num_classes=args.num_classes,
-                           vgg16_caffe_path=args.restore_from,
-                           pretrained=False
-                           )
     if args.resume:
         print("Resuming from ==>>", args.resume)
         state_dict = torch.load(args.resume)

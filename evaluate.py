@@ -1,9 +1,4 @@
 import os
-try:
-    import moxing as mox
-    mox.file.shift("os", "mox")
-except ImportError:
-    print("run on local machine")
 import os.path as osp
 from collections import OrderedDict
 import sys
@@ -32,7 +27,7 @@ NUM_CLASSES = 19
 LOG_DIR = './logs'
 DATA_DIRECTORY = '/share/zhouwei/datasets/cityscapes'
 DATA_LIST_PATH = './datasets/cityscapes_list/val.txt'
-RESTORE_FROM = 'pretrained/GTA5AAF_60000.pth'
+RESTORE_FROM = 'pretrained/'
 # imageNet mean
 
 CLASS_NAMES = [
