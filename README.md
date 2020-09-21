@@ -28,7 +28,7 @@ If you find this paper useful in your research, please consider citing:
 * Download the [GTA5 Dataset](https://download.visinf.tu-darmstadt.de/data/from_games/) as source dataset.
 * Download the [Cityscapes Dataset](https://www.cityscapes-dataset.com/) as target dataset.
 ### Initial Weights
-Initial weights can be downloaded from here. [Google Drive]().   
+Initial weights can be downloaded from here. [[Google Drive](), [BaiduYun](https://pan.baidu.com/s/1NOKDNWVd5-kd2w0rhzwM_w) (code: 9lov) ].   
 Put the weights in the "ASANet/pretrained" directory.   
 ### Training Script:
 ```
