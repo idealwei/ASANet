@@ -1,6 +1,6 @@
 #  Affinity Space Adaptation for Semantic Segmentation Across Domains 
 ---
-Pytorch implementation of the paper ["Affinity Space Adaptation for Semantic Segmentation Across Domains", TIP, 2020](https://ieeexplore.ieee.org/document/9184275/).   
+Pytorch implementation of the paper ["Affinity Space Adaptation for Semantic Segmentation Across Domains", TIP, 2020](https://ieeexplore.ieee.org/document/9184275/). In this paper, we address the problem of unsupervised domain adaptation (UDA) in semantic segmentation, achieving the state-of-the-art performance on standard benchmarks.
 
 ## Paper
 If you find this paper useful in your research, please consider citing:
@@ -28,7 +28,7 @@ If you find this paper useful in your research, please consider citing:
 * Download the [GTA5 Dataset](https://download.visinf.tu-darmstadt.de/data/from_games/) as source dataset.
 * Download the [Cityscapes Dataset](https://www.cityscapes-dataset.com/) as target dataset.
 ### Initial Weights
-Initial weights can be downloaded from here. [[Google Drive](), [BaiduYun](https://pan.baidu.com/s/1NOKDNWVd5-kd2w0rhzwM_w) (code: 9lov) ].   
+Initial weights and trained models can be downloaded from here. [[Google Drive](), [Baidu Drive](https://pan.baidu.com/s/1NOKDNWVd5-kd2w0rhzwM_w) (download code: 9lov) ].   
 Put the weights in the "ASANet/pretrained" directory.   
 ### Training Script:
 ```
