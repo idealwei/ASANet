@@ -25,7 +25,7 @@ BACKBONE = 'resnet'
 IGNORE_LABEL = 255
 NUM_CLASSES = 19
 LOG_DIR = './logs'
-DATA_DIRECTORY = '/share/zhouwei/datasets/cityscapes'
+DATA_DIRECTORY = '/path/to/cityscapes'
 DATA_LIST_PATH = './datasets/cityscapes_list/val.txt'
 RESTORE_FROM = 'pretrained/'
 # imageNet mean
