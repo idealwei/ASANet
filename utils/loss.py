@@ -30,10 +30,9 @@ class WeightedBCEWithLogitsLoss(nn.Module):
 
 class CrossEntropy2d(nn.Module):
 
-    def __init__(self, size_average=True, temperature=1.0, ignore_label=255):
+    def __init__(self, size_average=True, ignore_label=255):
         super(CrossEntropy2d, self).__init__()
         self.size_average = size_average
-        self.temperature = temperature
         self.ignore_label = ignore_label
 
     def forward(self, predict, target, weight=None):
@@ -56,8 +55,6 @@ class CrossEntropy2d(nn.Module):
         n, c, h, w = predict.size()
         target_mask = (target >= 0) * (target != self.ignore_label)
         target = target[target_mask]
-        if self.temperature:
-            target = target / self.temperature
         if not target.data.dim():
             return Variable(torch.zeros(1))
         predict = predict.transpose(1, 2).transpose(2, 3).contiguous()

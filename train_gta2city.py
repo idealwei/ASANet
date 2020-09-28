@@ -157,7 +157,7 @@ def main():
         pred_target = model(tar_img)
         pred_target = interp_target(pred_target)
         D_out = model_D(F.softmax(pred_target, dim=1))
-        loss_adv_target = bce_loss(D_out, torch.FloatTensor(D_out.data.size().fill_(source_label).cuda()))
+        loss_adv_target = bce_loss(D_out, torch.FloatTensor(D_out.data.size()).fill_(source_label).cuda())
         loss_adv = loss_adv_target * args.lambda_adv_target1 * damping
         loss_adv.backward()
         loss_adv_target_value += loss_adv_target.item()

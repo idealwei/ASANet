@@ -47,12 +47,9 @@ class cityscapesDataSet(data.Dataset):
     def __getitem__(self, index):
         datafiles = self.files[index]
         name = datafiles["name"]
-        # BGR
-        image = cv2.imread(datafiles["img"], 1)
-        label = cv2.imread(datafiles["lbl"], 0)
-        image = Image.fromarray(image)
+        image = Image.open(datafiles["img"]).convert('RGB')
+        label = Image.open(datafiles["lbl"])
         # resize
-        label = Image.fromarray(label)
 
         if self.random_crop:
             img_w, img_h = image.size
