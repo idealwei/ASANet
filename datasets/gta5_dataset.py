@@ -42,9 +42,8 @@ class GTA5DataSet(data.Dataset):
     def __getitem__(self, index):
         datafiles = self.files[index]
         name = datafiles["name"]
-        image = Image.open(datafiles["img"]).convert('RGB')
+        image = Image.open(datafiles["img"]).convert("RGB")
         label = Image.open(datafiles["lbl"])
-        # resize
         if self.random_crop:
             img_w, img_h = image.size
             crop_w, crop_h = self.img_size
@@ -60,6 +59,7 @@ class GTA5DataSet(data.Dataset):
             image = image.resize(self.img_size, Image.BICUBIC)
             label = label.resize(self.img_size, Image.NEAREST)
         image = np.asarray(image, np.float32)
+        image = image[:, :, ::-1]
         label = np.asarray(label, np.float32)
         # re-assign labels to match the format of Cityscapes
         label_copy = 255 * np.ones(label.shape, dtype=np.float32)

@@ -47,10 +47,9 @@ class cityscapesDataSet(data.Dataset):
     def __getitem__(self, index):
         datafiles = self.files[index]
         name = datafiles["name"]
-        image = Image.open(datafiles["img"]).convert('RGB')
+        # BGR
+        image = Image.open(datafiles["img"]).convert("RGB")
         label = Image.open(datafiles["lbl"])
-        # resize
-
         if self.random_crop:
             img_w, img_h = image.size
             crop_w, crop_h = self.img_size
@@ -62,6 +61,8 @@ class cityscapesDataSet(data.Dataset):
             image = image.resize(self.img_size, Image.BICUBIC)
             label = label.resize(self.img_size, Image.NEAREST)
         image = np.asarray(image, np.float32)
+        # RGB2BGR->
+        image = image[:, :, ::-1]
         label = self.encode_segmap(np.array(label, dtype=np.uint8))
         size = image.shape[:2]
         # normalize image
@@ -86,4 +87,3 @@ class cityscapesDataSet(data.Dataset):
         for _validc in self.valid_classes:
             mask[mask == _validc] = self.class_map[_validc]
         return mask
-
