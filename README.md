@@ -1,6 +1,6 @@
 #  Affinity Space Adaptation for Semantic Segmentation Across Domains 
 ---
-Pytorch implementation of the paper ["Affinity Space Adaptation for Semantic Segmentation Across Domains", TIP, 2020](https://ieeexplore.ieee.org/document/9184275/). In this paper, we address the problem of unsupervised domain adaptation (UDA) in semantic segmentation, achieving the state-of-the-art performance on standard benchmarks.
+Pytorch implementation of the paper ["Affinity Space Adaptation for Semantic Segmentation Across Domains", TIP, 2020](https://arxiv.org/abs/2009.12559). In this paper, we address the problem of unsupervised domain adaptation (UDA) in semantic segmentation, achieving the state-of-the-art performance on standard benchmarks.
 
 ## Paper
 If you find this paper useful in your research, please consider citing:
