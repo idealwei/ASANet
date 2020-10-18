@@ -15,6 +15,6 @@ CUDA_VISIBLE_DEVICES=0 python train_gta2city.py \
             --snapshot-dir=${SNAPSHOTS_DIR} \
             --resume='pretrained/GTA5_init.pth' \
             --batch-size=1 \
-            --num-steps=150000 \
+            --num-steps=100000 \
             --num-steps-stop=80000 \
             --lambda-adv-target1=0.001 \
